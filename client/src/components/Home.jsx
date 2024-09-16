@@ -16,6 +16,7 @@ const Home = ({ isAuthenticated, tasks, setTasks, taskTitle }) => {
   const [viewTaskId, setViewTaskId] = useState(null);
   const [updatedTaskId, setUpdateTaskId] = useState(null);
 
+  
   const deleteTask = async (id) => {
     await axios
       .delete(`http://localhost:4000/api/v1/task/delete/${id}`, {

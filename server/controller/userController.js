@@ -15,6 +15,7 @@ export const register = catchAsyncErrors(async (req, res, next) => {
     "image/webp",
     "image/avif",
   ];
+  
   if (!allowedFormats.includes(avatar.mimetype)) {
     return next(
       new ErrorHandler(
